@@ -1,19 +1,18 @@
-const express = require('express');
-const app = express();
+// Polyfill fetch
+import _fecth from "node-fetch";
+if (!global.fetch) {
+    global.fetch = _fecth;
+}
 
-app.listen(3000, () =>{
-    console.log("Servidor arriba") 
-})
+// Environment
+import dotenv from "dotenv";
+const result = dotenv.config();
+if (result.error) {
+    throw result.error;
+}
 
-app.get('/',(req, res) => {
-    res.send("Hello Word")
-})
-
-app.get('/json',(req, res) => {
-    res.send(
-        {
-            Autor: "Julian",
-            Apellido: "Arango"
-        }
-    )
-})
+// Express app
+import app from "./app.js";
+app.listen(app.get('port'), () => {
+    console.log(`App listening on port ${app.get('port')}!`);
+});
