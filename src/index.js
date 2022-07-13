@@ -13,6 +13,6 @@ if (result.error) {
 
 // Express app
 import app from "./app.js";
-app.listen(process.env.PORT, () => {
-    console.log(`App listening on port ${process.env.PORT}!`);
+app.listen(app.get('port'), () => {
+    console.log(`App listening on port ${app.get('port')}!`);
 });

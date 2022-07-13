@@ -32,6 +32,26 @@ function ObtenerProductos(result){
     return items
 }
 
-export { ObtenerCategorias, ObtenerProductos };
+function ObtenerDetalleProducto(category, article, description){
+    let categories = (category.path_from_root || [])
+    .map(path => path.name);
+    let item = {
+        id: article.id,
+        title: article.title,
+        price: {
+            currency: article.currency_id,
+            amount: article.available_quantity,
+            decimals: article.price
+        },
+        picture: article.pictures && article.pictures.length > 0 ? article.pictures[0].url : article.thumbnail,
+        condition: article.condition,
+        free_shipping: (article.shipping && article.shipping.free_shipping === true),
+        sold_quantity: article.sold_quantity,
+        description: description.plain_text
+    };
+    return {categories, item}
+}
+
+export { ObtenerCategorias, ObtenerProductos, ObtenerDetalleProducto };
 
 
