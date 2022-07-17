@@ -112,6 +112,13 @@ const author = {
  *          example: {"author":{"name":"Julian","lastname":"Arango Correa"},"categories":[],"item":{"id":"MLA899597750","title":"Sony Playstation 3 Super Slim 250gb Standard  Color Charcoal Black","price":{"currency":"ARS","amount":1,"decimals":57000},"picture":"http://http2.mlstatic.com/D_648159-MLA32731813733_112019-O.jpg","condition":"new","free_shipping":true,"sold_quantity":100,"description":"No solo vas a poder descargar los mejores videojuegos y navegar en la web sin límite, sino que, gracias a su interconectividad global, también vas a tener la posibilidad de competir en línea con tus amigos y con personas de todas partes del mundo disfrutando de aventuras inolvidables.\n\nCalidad de otro nivel\nVas a poder reproducir música, ver tus películas y series favoritas a través de las aplicaciones descargables. \n\nDiseño innovador\nNo solo esto, el control DualShock combina funciones revolucionarias y sin precedentes mientras conserva precisión, comodidad y exactitud en cada movimiento.\n\nAdaptada a tus necesidades\nGuardá tus apps, fotos, videos y mucho más en el disco duro, que cuenta con una capacidad de 250 GB.\nPor otro lado, tiene puerto USB y salida HDMI, que permiten conectar accesorios y cargar la batería de tu control mientras jugás."}}              
  */
 
+// /**
+//  * @swagger
+//  * tags: 
+//  *  name: Productos
+//  *  description: Controller para obtener productos MELI           
+//  */
+
 productosController.get('/',(req, res) => {
     res.send("Api tienda ML para productos")
 })

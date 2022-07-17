@@ -10,17 +10,26 @@ const swaggerOptions = {
         info:{
             title: "Productis MELI API",
             version: '1.0.0',
+            description: "API para obtener la informacion de los productos desde MELI",
+            contact:{
+                name: "Julian Arango Correa",
+                url: "https://github.com/jac2206/TiendaProductoML#readme",
+                email: "arango773gmail.com",
+            }
         },
         servers:[
                 {
-                    url: "http://localhost:3000"
+                    url: "http://localhost:3000",
+                    description: 'Entorno de desarrollo de apis'
                 },
                 {
-                    url: "http://tiendaproductosmlapi.azurewebsites.net"
+                    url: "http://tiendaproductosmlapi.azurewebsites.net",
+                    description: 'Entorno de producción de apis'                    
                 }
         ],
     },
-    apis: [`${path.join(__dirname, '../Controllers/*.js')}`]
+    // apis: ['../Controllers/ProductosController.js']   
+    apis: [`${path.join(__dirname, '../Controllers/*.js')}`]   
 };
 
 export {swaggerOptions};
