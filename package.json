@@ -1,7 +1,14 @@
 {
   "name": "tiendaproductosmlapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplicacion para consultar mediante api productos de MELI y mostrar detalles del producto",
+  "author": "Julián Arango Correa",
+  "license": "Free",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jac2206/TiendaProductosMLAPI"
+  },
+  "homepage": "https://github.com/jac2206/TiendaProductosMLAPI#readme",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -11,8 +18,6 @@
     "serve": "node src/index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "express": "^4.18.1",
     "jest": "^28.1.3",
