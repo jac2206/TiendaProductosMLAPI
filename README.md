@@ -62,7 +62,7 @@ http://localhost:3000/api-docs
 
 http://tiendaproductosmlapi.azurewebsites.net/api-docs
 
-## Analsisi de codigo estático sonar cloud 
+## Analisis de codigo estático sonar cloud 
 ![image](https://user-images.githubusercontent.com/66278236/179624046-ae41234e-3a1e-4c82-831f-a316d8388e0c.png)
 
 
